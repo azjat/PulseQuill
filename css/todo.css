@@ -1,0 +1,44 @@
+.todo-list, .todo-input-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 0.5fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+    margin: 0.5em;
+  }
+  
+  .todo-input-grid {
+    margin-bottom: 0.8em;
+    align-items: stretch;
+  }
+  
+  .todo-item{
+    margin-left: 0.4em;
+    font-size: 0.9em;
+  }
+
+  .todo-name,
+  .todo-date {
+    font-size: 15px;
+    padding: 6px;
+  }
+  
+  .todo-add {
+    background-color: rgb(180, 241, 180);
+    color: white;
+    border: none;
+    font-size: 0.9em;
+    border-radius: 0.6em;
+    cursor: pointer;
+    padding: 0.5em;
+  }
+  
+  .todo-del {
+    background-color: rgb(255, 145, 145);
+    color: white;
+    border: none;
+    border-radius: 0.6em;
+    font-size: 0.9em;
+    cursor: pointer;
+    padding: 0.5em;
+  }
