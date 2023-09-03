@@ -13,8 +13,16 @@ function renderTodoList() {
         const html = `
         <div class="todo-item" id="todo-name"> ${name}</div>
         <div class="todo-item" id="todo-date"> ${dueDate}</div>
-        <button class="todo-del inputs" 
-        ">Delete</button> 
+        <div class="todo-status-delete">
+  
+        <button class="todo-status inputs"> 
+        </button> 
+        
+        <button class="todo-del inputs"> 
+            <img class="todo-trash-icon" src="icons/trash.png">
+        </button> 
+
+        </div>
     `;
         todoListHTML += html;
     });

@@ -26,25 +26,6 @@
     width: 100%;
     height: 35%;
     background-color: #ff0000;
-    border-radius: 2%;
+    border-radius: 3%;
 }
 
-.todo-container {
-    width: 100%;
-    height: 65%;
-    background-color: #e7e7e7;
-    border-radius: 2%;
-}
-
-.inputs{
-    padding: 0.5em; 
-    border-radius: 0.75rem; 
-    border: 0.09375rem solid #d4d4d4; 
-    outline: none;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    box-shadow: 0 0 1.25rem -1.125rem;
-}
-
-.inputs:active {
-    transform: scale(0.97);
-}
