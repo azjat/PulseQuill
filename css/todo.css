@@ -20,8 +20,8 @@
 
 .todo-list,
 .todo-input-grid {
+  grid-template-columns: 1.5fr 0.8fr 0.3fr;
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr 0.5fr;
   column-gap: 10px;
   row-gap: 10px;
   align-items: center;
@@ -45,27 +45,39 @@
 }
 
 .todo-add {
-  background-color: rgb(180, 241, 180);
+  background-color: rgb(145, 255, 145);
   color: white;
   border: none;
   font-size: 0.9em;
   border-radius: 0.6em;
   cursor: pointer;
   padding: 0.5em;
+  width: 100%;
 }
 
 
-.todo-status-delete {
+.todo-status-name {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: left;
 }
 
 .todo-trash-icon {
   object-fit: cover;
+  height: 100%;
+}
+.todo-del{
+  background-color:  rgb(255, 145, 145);
+  color: white;
+  border: none;
+  height: 2em;
+  font-size: 0.9em;
+  border-radius: 0.6em;
+  cursor: pointer;
+  padding: 0.5em;
   width: 100%;
 }
-.todo-del, .todo-status {
+.todo-status {
   border: none;
   border-radius: 0.6em;
   font-size: 0.9em;
@@ -79,10 +91,12 @@
 
 
 
-.todo-status{
+.todo-status-not-started{
   background-color:  rgb(255, 145, 145);
 }
-
-.todo-del{
-  background-color:  rgb(255, 145, 145);
+.todo-status-in-progress{
+  background-color:  rgb(255, 255, 145);
+}
+.todo-status-completed{
+  background-color:  rgb(145, 255, 145);
 }
