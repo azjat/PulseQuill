@@ -54,6 +54,7 @@ function renderTodoList() {
                 case 1:
                     button.classList.add('todo-status-not-started');
                     button.classList.remove('todo-status-completed');
+                    todoList[i].status = 'todo-status-not-started';
                     todoUpdate();
                     break;
                 case 2:
