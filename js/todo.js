@@ -48,7 +48,7 @@ function renderTodoList() {
 
     document.querySelectorAll('.todo-status').forEach((button, i) => { 
         let clickCount = 1;
-        button.addEventListener('click', () => {
+        button.addEventListener('mousedown', () => {
             clickCount++;
             switch (clickCount%3) {
                 case 1:
