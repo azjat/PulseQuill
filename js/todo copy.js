@@ -17,24 +17,11 @@ function renderTodoList() {
         const {
             name,
             dueDate,
-            clickCount
+            status
         } = todo;
-
-        switch (clickCount % 3) {
-            case 1:
-                var clicks = 'todo-status-not-started';
-                break;
-            case 2:
-                var clicks = 'todo-status-in-progress';
-                break;
-            case 0:
-                var clicks = 'todo-status-completed';
-                break;
-        }
-
         const html = `
         <div class="todo-status-name">
-            <button class="todo-status inputs ${clicks}"> 
+            <button class="todo-status inputs ${status}"> 
             </button> 
             <div class="todo-item" id="todo-name"> ${name}</div>
         </div>
@@ -59,45 +46,44 @@ function renderTodoList() {
         });
     });
 
-    document.querySelectorAll('.todo-status').forEach((button, i) => {
-        let clickCount = todoList[i].clickCount;
+    document.querySelectorAll('.todo-status').forEach((button, i) => { 
+        let clickCount = 1;
         button.addEventListener('mousedown', () => {
             clickCount++;
-            todoList[i].clickCount = clickCount;
-            switch (clickCount % 3) {
+            switch (clickCount%3) {
                 case 1:
                     button.classList.add('todo-status-not-started');
                     button.classList.remove('todo-status-completed');
                     button.classList.remove('todo-status-in-progress');
-
+                    todoList[i].status = 'todo-status-not-started';
                     todoUpdate();
                     break;
                 case 2:
                     button.classList.add('todo-status-in-progress');
                     button.classList.remove('todo-status-not-started');
                     button.classList.remove('todo-status-completed');
-
+                    todoList[i].status = 'todo-status-in-progress'; 
                     todoUpdate();
                     break;
                 case 0:
                     button.classList.add('todo-status-completed');
                     button.classList.remove('todo-status-in-progress');
                     button.classList.remove('todo-status-not-started');
-
+                    todoList[i].status = 'todo-status-completed'; 
                     todoUpdate();
                     break;
             }
         });
     });
 }
-
+ 
 document.querySelector('.todo-add').addEventListener('click', addTodo);
-document.querySelector('.todo-name').addEventListener('keydown', function (event) {
+document.querySelector('.todo-name').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        addTodo();
+      addTodo();
     }
-});
-
+  });
+  
 
 function addTodo() {
 
@@ -114,11 +100,11 @@ function addTodo() {
     todoList.push({
         name,
         dueDate,
-        clickCount: 1
+        status: 'todo-status-not-started'
     });
 
     todoUpdate();
 
-    input.value = '';
+    input.value = ''; 
     renderTodoList();
 }
