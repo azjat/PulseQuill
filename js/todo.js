@@ -20,14 +20,14 @@ function renderTodoList() {
             clickCount
         } = todo;
 
-        switch (clickCount % 3) {
+        switch (clickCount) {
             case 1:
                 var clicks = 'todo-status-not-started';
                 break;
             case 2:
                 var clicks = 'todo-status-in-progress';
                 break;
-            case 0:
+            case 3:
                 var clicks = 'todo-status-completed';
                 break;
         }
@@ -62,9 +62,14 @@ function renderTodoList() {
     document.querySelectorAll('.todo-status').forEach((button, i) => {
         let clickCount = todoList[i].clickCount;
         button.addEventListener('mousedown', () => {
-            clickCount++;
+            if (clickCount > 2) {
+                clickCount = 1;
+            } else {
+                clickCount++;
+            }
+            
             todoList[i].clickCount = clickCount;
-            switch (clickCount % 3) {
+            switch (clickCount) {
                 case 1:
                     button.classList.add('todo-status-not-started');
                     button.classList.remove('todo-status-completed');
@@ -79,7 +84,7 @@ function renderTodoList() {
 
                     todoUpdate();
                     break;
-                case 0:
+                case 3:
                     button.classList.add('todo-status-completed');
                     button.classList.remove('todo-status-in-progress');
                     button.classList.remove('todo-status-not-started');

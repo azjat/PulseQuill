@@ -1,5 +1,4 @@
 const apiKey = "dc7ee58adb3effd37322f78b3c370c66";
-
 const cityInput = document.querySelector(".city-input");
 const fetchWeatherButton = document.querySelector(".fetch-weather");
 const weatherInfo = document.querySelector(".weather-info");
@@ -14,18 +13,28 @@ fetchWeatherButton.addEventListener("click", () => {
             console.log('Error fetching weather data:', error);
         })
         .then(data => {
+            
             console.log(data);
+
             const rawTemperature = data.main.temp;
             const temperature = Math.round(rawTemperature * 2) / 2;
+
             const description = data.weather[0].description;
             const descriptionCapitalized = description.charAt(0).toUpperCase() + description.slice(1);
+
             const cityName = data.name;
 
-            // Display weather information
+            const icon = data.weather[0].icon;
+            console.log(icon);
+
             weatherInfo.innerHTML = `
-            <h2>Weather in ${cityName}</h2>
-            <p>Temperature: ${temperature}°C</p>
-            <p>${descriptionCapitalized}</p>
+            <div class="weather-desc-div"> 
+                <p class="weather-city">${cityName}</p>
+                <p class="weather-desc">${temperature}°C, <br><span class="desc-span">${descriptionCapitalized}</span></p>
+            </div>
+            <div class="weather-icon-div">
+                <img class="weather-icon" src="/PulseQuill/icons/${icon}.png" alt="Can't get the icon">
+            </div>
         `;
         })
 });
