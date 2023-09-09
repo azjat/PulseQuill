@@ -75,13 +75,13 @@
 }
 
 .todo-status-not-started {
-  background-color: rgb(255, 128, 171);
+  background-color: #ff80ab;
 }
 
 .todo-status-in-progress {
-  background-color: rgb(255, 204, 102);
+  background-color: #ffcc66;
 }
 
 .todo-status-completed {
-  background-color: rgb(135, 192, 149);
+  background-color: #87c095;
 }
