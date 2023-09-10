@@ -13,6 +13,7 @@ body {
     display: flex;
     flex-direction: row;
     max-width: 54.4em;
+    min-width: 38.8em;
 }
 
 .notes-container {
