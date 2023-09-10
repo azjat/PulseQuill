@@ -15,9 +15,7 @@ function renderTodoList() {
 
     todoList.forEach((todo, i) => {
         const {
-            name,
-            dueDate,
-            clickCount
+            name, dueDate, clickCount
         } = todo;
 
         switch (clickCount) {
@@ -66,7 +64,7 @@ function renderTodoList() {
             } else {
                 clickCount++;
             }
-            
+
             todoList[i].clickCount = clickCount;
             switch (clickCount) {
                 case 1:
@@ -116,9 +114,7 @@ function addTodo() {
     const dueDate = dateInput.value;
 
     todoList.push({
-        name,
-        dueDate,
-        clickCount: 1
+        name, dueDate, clickCount: 1
     });
 
     todoUpdate();

@@ -3,15 +3,15 @@ var minute = document.getElementById("minute");
 var seconds = document.getElementById("seconds");
 
 var set_clock = setInterval(
-    function clock(){
+    function clock() {
         var date_now = new Date();
         var hr = date_now.getHours();
         var min = date_now.getMinutes();
         var sec = date_now.getSeconds();
 
         var calc_hr = (hr * 30) + (min / 2);
-        var calc_min =    (min * 6)  ;
-        var calc_sec = sec * 6 ;
+        var calc_min = (min * 6);
+        var calc_sec = sec * 6;
 
         hour.style.transform = "rotate(" + calc_hr + "deg)";
         minute.style.transform = "rotate(" + calc_min + "deg)";
@@ -30,7 +30,7 @@ var set_clock = setInterval(
 
 //     const timezoneOffset = localStorage.getItem("timezone");
 //     let date_now;
-    
+
 //     if (timezoneOffset !== null) {
 //         // If a timezone offset is available, use it to calculate the time
 //         const localTime = new Date();
