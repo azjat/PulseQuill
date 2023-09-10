@@ -54,5 +54,6 @@ function fetchWeather() {
         `;
         });
 }
-
-fetchWeather();
+if (localStorage.getItem("PrefferedCityName")) {
+    fetchWeather();
+}
