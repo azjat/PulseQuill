@@ -1,0 +1,62 @@
+.time-info{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.clock{
+    height: 8em;
+    width: 8em;
+    margin: 0.5em;
+    background-color: rgba(255,255,255,0.06);
+    -webkit-backdrop-filter: blur(1em);
+            backdrop-filter: blur(1em);
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+    box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+    border: 0.1em solid rgba(255,255,255,0.1);
+}
+.hand{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    -webkit-backdrop-filter: blur(1em);
+            backdrop-filter: blur(1em);
+    border-radius: 0.25em;
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
+}
+.hour{
+    height: 1.5em;
+    width: 0.25em;
+    top: 2.5em;
+    background-color: rgb(255, 128, 171);
+    z-index: 100;
+}
+.minute{
+    height: 2em;
+    width: 0.125em;
+    top: 2em;
+    background-color: #ffcc66;
+    z-index: 99;
+}
+.seconds{
+    height: 2.25em;
+    width: 0.075em;
+    top: 1.75em;
+    background-color: #87c095;
+    z-index: 98;
+}
+.center-point{
+    height: 0.4em;
+    width: 0.4em;
+    top: 3.75em;
+    background-color: rgb(255, 128, 171);
+    border-radius: 50%;
+    z-index: 101;
+}

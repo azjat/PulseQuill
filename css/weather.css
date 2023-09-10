@@ -1,8 +1,7 @@
 .weather-input-grid {
-    grid-template-columns: 1.5fr 0.1fr;
-    display: grid;
+    display: flex;
     column-gap: 10px;
-    align-items: center;
+    align-items: space-around;
     margin: 0.5em;
   
 }
@@ -10,19 +9,21 @@
 .city-input {
     background-color:#E0E5EC;
     box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
+    width: 88.46%;
 }
 
 .fetch-weather {
-    background-color:  rgb(135, 192, 149);
-    color: white;
+    background-color: rgb(135, 192, 149);
+    color: rgb(0, 0, 0);
     border: none;
-    height: 2em;
     font-size: 0.9em;
     border-radius: 0.6em;
     cursor: pointer;
     padding: 0.5em;
-    width: 2em;
-    border-radius: 50%;
+    width: 100%;
+    box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+    height: 2em;
+    width: 11.54%;
     display: flex;
     align-items: center;
     justify-content: center;

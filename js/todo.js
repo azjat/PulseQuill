@@ -44,7 +44,6 @@ function renderTodoList() {
         <button class="todo-del inputs"> 
             <img class="todo-trash-icon" src="icons/trash.png">
         </button> 
-        
     `;
         todoListHTML += html;
     });

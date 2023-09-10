@@ -4,13 +4,9 @@
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
-  align-items: center;
   margin: 0.5em;
-}
-
-.todo-input-grid {
-  margin-bottom: 0.8em;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
 .todo-item {
@@ -26,17 +22,31 @@
 }
 
 .todo-add {
-  background-color: rgb(135, 192, 149);
-  color: rgb(0, 0, 0);
   border: none;
+  background-color: rgb(135, 192, 149);
+  color: black;
   font-size: 0.9em;
   border-radius: 0.6em;
   cursor: pointer;
   padding: 0.5em;
   width: 100%;
   box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
+.todo-add-icon {
+  object-fit: cover;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.todo-add-hover {
+  filter: invert(1);
+}
 
 .todo-status-name {
   display: flex;
@@ -58,8 +68,10 @@
   border-radius: 0.6em;
   cursor: pointer;
   padding: 0.5em;
-  width: 100%;
   box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .todo-status {

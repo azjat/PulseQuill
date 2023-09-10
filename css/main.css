@@ -12,6 +12,7 @@ body {
     margin: 10vh auto 0 auto;
     display: flex;
     flex-direction: row;
+    max-width: 54.4em;
 }
 
 .notes-container {
@@ -50,7 +51,7 @@ body {
 .inputs {
     padding: 0.5em;
     border-radius: 0.75rem;
-    border: 0.09375rem solid #d4d4d4;
+    border: 0.09375rem solid #E0E5EC;
     outline: none;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     box-shadow: 0 0 1.25rem -1.125rem;
