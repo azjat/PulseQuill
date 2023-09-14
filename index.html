@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./css/todo.css">
     <link rel="stylesheet" href="./css/weather.css">
     <link rel="stylesheet" href="./css/clock.css">
+    <link rel="stylesheet" href="./css/notes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
@@ -17,6 +19,8 @@
     <script defer src="./js/todo.js"></script>
     <script defer src="./js/weather.js"></script>
     <script defer src="./js/clock.js"></script>
+    <script defer src="./js/notes.js"></script>
+    <script src="https://kit.fontawesome.com/763fa77984.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./icons/PulseQuill.ico"/>
 </head>
 
@@ -26,7 +30,64 @@
 </nav> -->
 
 <div class="main-container">
-    <div class="notes-container"></div>
+    <dasiv class="notes-container">
+        <div class="notes-toolbar">
+            <button id="bold" class="option-button format">
+                <p class="fa-solid fa-bold"></p>
+            </button>
+            <button id="italic" class="option-button format">
+                <p class="fa-solid fa-italic"></p>
+            </button>
+            <button id="underline" class="option-button format">
+                <p class="fa-solid fa-underline"></p>
+            </button>
+            <button id="strike" class="option-button format">
+                <p class="fa-solid fa-strikethrough"></p>
+            </button>
+            
+            <button id="undo" class="option-button">
+                <p class="fa-solid fa-undo"></p>
+            </button>
+            <button id="redo" class="option-button">
+                <p class="fa-solid fa-redo"></p>
+            </button>
+
+            <button id="justify-left" class="option-button align">
+                <p class="fa-solid fa-align-left"></p>
+            </button>
+            <button id="justify-center" class="option-button align">
+                <p class="fa-solid fa-align-center"></p>
+            </button>
+            <button id="justify-right" class="option-button align">
+                <p class="fa-solid fa-align-right"></p>
+            </button>
+            <button id="justify-full" class="option-button align">
+                <p class="fa-solid fa-align-justify"></p>
+            </button>
+
+            <!-- <select id="format-block" class="advanced-options">
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+            </select> -->
+            <select id="font-size" class="advanced-options">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <!-- <select id="font-size" class="advanced-options"></select> -->
+
+        </div>
+        <div class="text-input" contenteditable="true">
+        </div>
+    </dasiv>
     <div class="weather-time-todo-container">
 
         <div class="weather-time-container">
