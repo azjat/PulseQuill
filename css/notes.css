@@ -36,7 +36,9 @@
 .fa-solid:hover{
     color: rgb(135, 192, 149);
 }
-
+.active{
+    color: rgb(135, 192, 149);
+}
 .text-input{
     width: 94%;
     margin-top: 1%;
