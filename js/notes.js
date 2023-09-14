@@ -19,13 +19,13 @@ const highlighter = (className, needsRemoval) => {
                 highlighterRemover(className);
                 if (!alreadyActive) {
                     //highlight clicked button
-                    console.log("not active");
+                    console.log("not active, added class");
                     button.classList.add("active");
                 }
             } else {
                 //if other buttons can be highlighted
                 button.classList.toggle("active");
-                console.log("not needs removal");
+                console.log("else");
             }
         });
     });
@@ -34,7 +34,7 @@ const highlighter = (className, needsRemoval) => {
 const highlighterRemover = (className) => {
     className.forEach((button) => {
         button.classList.remove("active");
-        console.log("removed");
+        console.log("removed the active class");
     });
 };
 
