@@ -49,7 +49,7 @@ function fetchWeather() {
                 <p class="weather-desc">${temperature}°C, <br><span class="desc-span">${descriptionCapitalized}</span></p>
             </div>
             <div class="weather-icon-div">
-                <img class="weather-icon" src="/icons/weather/${icon}.png" alt="Can't get the icon">
+                <img class="weather-icon" src="/PulseQuill/icons/weather/${icon}.png" alt="Can't get the icon">
             </div>
         `;
         });
