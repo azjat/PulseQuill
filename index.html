@@ -13,114 +13,176 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script defer src="./js/main.js"></script>
     <script defer src="./js/todo.js"></script>
     <script defer src="./js/weather.js"></script>
     <script defer src="./js/clock.js"></script>
     <script defer src="./js/notes.js"></script>
-    <script src="https://kit.fontawesome.com/763fa77984.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="./icons/PulseQuill.ico"/>
+    <link rel="shortcut icon" href="./icons/PulseQuill.ico" />
 </head>
 
 <body>
-<!--
+    <!--
 <nav>
 </nav> -->
 
-<div class="main-container">
-    <dasiv class="notes-container">
-        <div class="notes-toolbar">
-            <button id="bold" class="option-button format">
-                <p class="fa-solid fa-bold"></p>
-            </button>
-            <button id="italic" class="option-button format">
-                <p class="fa-solid fa-italic"></p>
-            </button>
-            <button id="underline" class="option-button format">
-                <p class="fa-solid fa-underline"></p>
-            </button>
-            <button id="strikeThrough" class="option-button format">
-                <p class="fa-solid fa-strikethrough"></p>
-            </button>
-            
-            <button id="undo" class="option-button">
-                <p class="fa-solid fa-undo"></p>
-            </button>
-            <button id="redo" class="option-button">
-                <p class="fa-solid fa-redo"></p>
-            </button>
-
-            <button id="justifyLeft" class="option-button align">
-                <p class="fa-solid fa-align-left"></p>
-            </button>
-            <button id="justifyCenter" class="option-button align">
-                <p class="fa-solid fa-align-center"></p>
-            </button>
-            <button id="justifyRight" class="option-button align">
-                <p class="fa-solid fa-align-right"></p>
-            </button>
-            <button id="justifyFull" class="option-button align">
-                <p class="fa-solid fa-align-justify"></p>
-            </button>
-
-            <select id="fontSize" class="advanced-options">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3" selected>3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-            </select>
-            <!-- <select id="font-size" class="advanced-options"></select> -->
-
-        </div>
-        <div class="text-input" contenteditable="true">
-        </div>
-    </dasiv>
-    <div class="weather-time-todo-container">
-
-        <div class="weather-time-container">
-
-            <div class="weather-input-grid">
-                <input type="text" class="city-input inputs" placeholder="Enter city name">
-                <button class="fetch-weather inputs">
-                    <img src="icons/search.png" alt="search" class="search-icon">
+    <div class="main-container">
+        <div class="notes-container">
+            <div class="notes-toolbar">
+                <button id="bold" class="option-button format">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bold">
+                        <path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path>
+                        <path d="M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path>
+                    </svg>
                 </button>
+                <button id="italic" class="option-button format">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-italic">
+                        <line x1="19" y1="4" x2="10" y2="4"></line>
+                        <line x1="14" y1="20" x2="5" y2="20"></line>
+                        <line x1="15" y1="4" x2="9" y2="20"></line>
+                    </svg>
+                </button>
+                <button id="underline" class="option-button format">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-underline">
+                        <path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"></path>
+                        <line x1="4" y1="21" x2="20" y2="21"></line>
+                    </svg>
+                </button>
+
+                <button id="undo" class="option-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-rotate-ccw">
+                        <polyline points="1 4 1 10 7 10"></polyline>
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                    </svg>
+                </button>
+                <button id="redo" class="option-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-rotate-cw">
+                        <polyline points="23 4 23 10 17 10"></polyline>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                    </svg>
+                </button>
+
+                <button id="justifyLeft" class="option-button align">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-align-left">
+                        <line x1="17" y1="10" x2="3" y2="10"></line>
+                        <line x1="21" y1="6" x2="3" y2="6"></line>
+                        <line x1="21" y1="14" x2="3" y2="14"></line>
+                        <line x1="17" y1="18" x2="3" y2="18"></line>
+                    </svg>
+                </button>
+                <button id="justifyCenter" class="option-button align">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-align-left">
+                        <line x1="17" y1="10" x2="3" y2="10"></line>
+                        <line x1="21" y1="6" x2="3" y2="6"></line>
+                        <line x1="21" y1="14" x2="3" y2="14"></line>
+                        <line x1="17" y1="18" x2="3" y2="18"></line>
+                    </svg>
+                </button>
+                <button id="justifyRight" class="option-button align">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-align-right">
+                        <line x1="21" y1="10" x2="7" y2="10"></line>
+                        <line x1="21" y1="6" x2="3" y2="6"></line>
+                        <line x1="21" y1="14" x2="3" y2="14"></line>
+                        <line x1="21" y1="18" x2="7" y2="18"></line>
+                    </svg>
+                </button>
+                <button id="justifyFull" class="option-button align">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-align-justify">
+                        <line x1="21" y1="10" x2="3" y2="10"></line>
+                        <line x1="21" y1="6" x2="3" y2="6"></line>
+                        <line x1="21" y1="14" x2="3" y2="14"></line>
+                        <line x1="21" y1="18" x2="3" y2="18"></line>
+                    </svg>
+                </button>
+
+                <select id="fontSize" class="advanced-options">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+
+                <!-- <div class="input-wrapper">
+                    <input type="color" id="foreColor" class="advanced-options color"/>
+                    <label class="color-label" for="foreColor">Color</label>
+                </div> -->
+
+                <button id="colorPicker" class="option-button">
+                    <input type="color" id="foreColor" class="advanced-options color"/>
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"/></svg>   -->
+                </button>
+
+
+
+
+            </div>
+            <div class="text-input" contenteditable="true" spellcheck="false">
             </div>
 
-            <div class="weather-time-info">
-                <div class="weather-info"></div>
-                <div class="time-info">
-                    <div class="clock">
-                        <div class="hour hand" id="hour"></div>
-                        <div class="minute hand" id="minute"></div>
-                        <div class="seconds hand" id="seconds"></div>
-                        <div class="center-point hand"></div>
+        </div>
+        <div class="weather-time-todo-container">
+
+            <div class="weather-time-container">
+
+                <div class="weather-input-grid">
+                    <input type="text" class="city-input inputs" placeholder="Enter city name">
+                    <button class="fetch-weather inputs">
+                        <img src="icons/search.png" alt="search" class="search-icon">
+                    </button>
+                </div>
+
+                <div class="weather-time-info">
+                    <div class="weather-info"></div>
+                    <div class="time-info">
+                        <div class="clock">
+                            <div class="hour hand" id="hour"></div>
+                            <div class="minute hand" id="minute"></div>
+                            <div class="seconds hand" id="seconds"></div>
+                            <div class="center-point hand"></div>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+
+
+            <div class="todo-container">
+                <div class="todo-input-grid">
+                    <input class="todo-name inputs" placeholder="Todo name">
+                    <input type="date" class="todo-date inputs">
+                    <button class="todo-add inputs">
+                        <img src="icons/add.svg" alt="Add" class="todo-add-icon">
+                    </button>
+                </div>
+                <div class="todo-list"></div>
             </div>
 
         </div>
-
-
-        <div class="todo-container">
-            <div class="todo-input-grid">
-                <input class="todo-name inputs" placeholder="Todo name">
-                <input type="date" class="todo-date inputs">
-                <button class="todo-add inputs">
-                    <img src="icons/add.svg" alt="Add" class="todo-add-icon">
-                </button>
-            </div>
-            <div class="todo-list"></div>
-        </div>
-
     </div>
-</div>
 
-<!-- <footer>
+    <!-- <footer>
 </footer> -->
 
 </body>

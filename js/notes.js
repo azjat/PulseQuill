@@ -2,6 +2,7 @@ let optionsButtons = document.querySelectorAll(".option-button");
 let advancedOptions = document.querySelectorAll(".advanced-options");
 let formatButtons = document.querySelectorAll(".format");
 let alignButtons = document.querySelectorAll(".align");
+let icons = document.querySelectorAll(".format-icon");
 
 const highlighter = (className, needsRemoval) => {
     className.forEach((button) => {
@@ -31,6 +32,7 @@ const highlighter = (className, needsRemoval) => {
     });
 };
 
+            
 const highlighterRemover = (className) => {
     className.forEach((button) => {
         button.classList.remove("active");

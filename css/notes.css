@@ -1,9 +1,8 @@
-.notes-toolbar{
+.notes-toolbar {
     height: 3%;
     width: 94%;
     font-size: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0.5em;
@@ -12,37 +11,11 @@
     outline: none;
     box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
 }
-.option-button{
-    background-color: transparent;
-    border: none;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    width: 5%;
-}
-.advanced-options{
-    background-color: transparent;
-    border: none;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    width: 10%;
-    min-width: 10%;
-}
-.fa-solid{
-    margin:0;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.fa-solid:hover{
-    color: rgb(135, 192, 149);
-}
-.active{
-    color: rgb(135, 192, 149);
-}
-.text-input{
+
+.text-input {
     width: 94%;
     margin-top: 1%;
-    height: 91%;
+    height: 87%;
     background-color: #E0E5EC;
     border: none;
     font-size: 100%;
@@ -52,8 +25,69 @@
     outline: none;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
-/* 
-.text-input:focus{
-    background-color: #E9ECF1; 
-    box-shadow: inset;
-} */
+
+.option-button {
+    background-color: transparent;
+    border: none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    width: 5%;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advanced-options {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    font-size: 0.9em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feather {
+    transition: all 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 80%;
+}
+
+.option-button:hover,
+.active {
+    background-color: #C9CED4;
+    cursor: pointer;
+}
+
+#colorPicker {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.color {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 1em;
+    height: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.color::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.color::-moz-color-swatch {
+    border-radius: 50%;
+    border: none;
+}
