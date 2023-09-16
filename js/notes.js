@@ -6,10 +6,11 @@ let icons = document.querySelectorAll(".format-icon");
 let foreColor = document.querySelector("#foreColor");
 let colorHex;
 let colorRgba;
+let colorBtn;
 
 foreColor.value = "#000000";
 
-function hexToRgba(hex) {
+function hexToRgba(hex, opacity) {
     if (hex.charAt(0) === '#') {
         hex = hex.slice(1);
     }
@@ -19,13 +20,19 @@ function hexToRgba(hex) {
     let r = parseInt(hex.slice(0, 2), 16);
     let g = parseInt(hex.slice(2, 4), 16);
     let b = parseInt(hex.slice(4, 6), 16);
-    return `rgba(${r},${g},${b},0.3)`;
+    if (opacity) {
+        return `rgba(${r},${g},${b},${opacity})`;
+    } else {
+        return `rgba(${r},${g},${b},0.3)`;
+    }
 }
 
 function setColor(){
     colorHex = foreColor.value;
     colorRgba = hexToRgba(colorHex);
+    colorBtn = hexToRgba(colorHex, 1);
     document.documentElement.style.setProperty('--rgba-color', colorRgba);
+    document.documentElement.style.setProperty('--btn-color', colorBtn);
 };
 
 foreColor.addEventListener("change", setColor);
@@ -50,7 +57,7 @@ const highlighter = (className, needsRemoval) => {
             } else {
                 //if other buttons can be highlighted
                 button.classList.toggle("active");
-                console.log("else");
+                console.log("normal button clicked");
             }
         });
     });
@@ -71,6 +78,7 @@ const initializer = () => {
     highlighter(formatButtons, false);
 
 };
+
 const modifyText = (command, defaultUi, value) => {
     //execCommand executes command on selected text
     document.execCommand(command, defaultUi, value);
@@ -88,5 +96,6 @@ advancedOptions.forEach((button) => {
     });
 });
 
-
 initializer();
+
+

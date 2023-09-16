@@ -7,7 +7,6 @@
     align-items: center;
     padding: 0.5em;
     border-radius: 0.75rem;
-    border: 0.09375rem solid #E0E5EC;
     outline: none;
     box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
 }
@@ -23,6 +22,9 @@
     border: none;
     outline: none;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-wrap:break-word;
 }
 
 .option-button {
@@ -79,23 +81,20 @@
 }
 
 .color {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    width: 100%;
-    height: auto;
+    opacity: 0;
     aspect-ratio: 1/1;
-    border: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+#colorPicker{
     cursor: pointer;
-}
-
-.color::-webkit-color-swatch {
-    border: none;
+    display: flex;
+    width: 6%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    background-color: var(--btn-color);
     border-radius: 50%;
-}
-
-.color::-moz-color-swatch {
-    border-radius: 50%;
-    border: none;
 }
