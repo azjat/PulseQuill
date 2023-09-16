@@ -32,9 +32,6 @@ foreColor.addEventListener("change", setColor);
 
 setColor();
 
-
-
-
 const highlighter = (className, needsRemoval) => {
     className.forEach((button) => {
         button.addEventListener("click", () => {
