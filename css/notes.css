@@ -17,11 +17,10 @@
     margin-top: 1%;
     height: 87%;
     background-color: #E0E5EC;
-    border: none;
     font-size: 100%;
     padding: 0.5em;
     border-radius: 0.75rem;
-    border: 0.09375rem solid #E0E5EC;
+    border: none;
     outline: none;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -60,15 +59,23 @@
 
 .option-button:hover,
 .active {
-    background-color: #C9CED4;
+    background-color: var(--rgba-color);
     cursor: pointer;
-}
+} 
 
 #colorPicker {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
+    border: none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    width: 5%;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 12%;
 }
 
 .color {

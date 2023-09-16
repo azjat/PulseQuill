@@ -4,7 +4,7 @@
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
-  margin: 0.5em;
+  margin: 0.5em 0.65em;
   align-items: center;
   justify-content: center;
 }
