@@ -1,6 +1,6 @@
 .weather-input-grid {
     display: flex;
-    column-gap: 10px;
+    column-gap: 0.625em;
     margin: 0.5em 0.6em;
 }
 
@@ -30,7 +30,6 @@
 .search-icon {
     object-fit: cover;
     height: 100%;
-    
 }
 .weather-time-info{
     display: grid;
@@ -71,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.5em;
+    margin: 0.6em;
 }
 .weather-icon {
     object-fit: cover;

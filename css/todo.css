@@ -2,9 +2,9 @@
 .todo-input-grid {
   grid-template-columns: 1.5fr 0.8fr 0.3fr;
   display: grid;
-  column-gap: 10px;
-  row-gap: 10px;
-  margin: 0.5em 0.65em;
+  column-gap: 0.625em;
+  row-gap: 0.625em;
+  margin: 0.5em 0.6em;
   align-items: center;
   justify-content: center;
 }
@@ -29,7 +29,6 @@
   border-radius: 0.6em;
   cursor: pointer;
   padding: 0.5em;
-  width: 100%;
   box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
   height: 2em;
   display: flex;
