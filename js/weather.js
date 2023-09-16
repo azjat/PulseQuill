@@ -50,7 +50,7 @@ function fetchWeather() {
             </div>
             <div class="weather-icon-div">
                 <img class="weather-icon" src="../icons/weather/${icon}.png" alt="">
-                <img class="weather-icon" src="PulseQuill/icons/weather/${icon}.png" alt="">
+                <img class="weather-icon" src="/PulseQuill/icons/weather/${icon}.png" alt="">
             </div>
         `;
         });
