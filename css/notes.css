@@ -83,8 +83,9 @@
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    width: 1em;
-    height: 1em;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
     border: none;
     cursor: pointer;
 }
