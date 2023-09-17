@@ -22,7 +22,7 @@
     border: none;
     outline: none;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    overflow-y: scroll;
+    overflow-y: auto;
     scroll-behavior: smooth;
     overflow-wrap:break-word;
 }
@@ -33,12 +33,14 @@
     font-size: 100%;
     margin: 0;
     padding: 0;
-    width: 5%;
+    width: 6%;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     border-radius: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
 }
 
 .advanced-options {
@@ -56,7 +58,10 @@
 
 .feather {
     transition: all 0.05s cubic-bezier(0.19, 1, 0.22, 1);
-    width: 80%;
+    width: 70%;
+    height: 70%;
+    padding: 10%;
+    align-self: center;
 }
 
 .option-button:hover,
@@ -64,21 +69,6 @@
     background-color: var(--rgba-color);
     cursor: pointer;
 } 
-
-#colorPicker {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    width: 5%;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    border-radius: 12%;
-}
 
 .color {
     opacity: 0;
@@ -90,11 +80,13 @@
 #colorPicker{
     cursor: pointer;
     display: flex;
+    border: none;
     width: 6%;
     height: auto;
     align-items: center;
     justify-content: center;
     aspect-ratio: 1/1;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     background-color: var(--btn-color);
     border-radius: 50%;
 }
