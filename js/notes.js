@@ -2,11 +2,13 @@ let optionsButtons = document.querySelectorAll(".option-button");
 let advancedOptions = document.querySelectorAll(".advanced-options");
 let formatButtons = document.querySelectorAll(".format");
 let alignButtons = document.querySelectorAll(".align");
-let icons = document.querySelectorAll(".format-icon");
+//let icons = document.querySelectorAll(".format-icon");
 let foreColor = document.querySelector("#foreColor");
+let textInput = document.querySelector(".text-input");
 let colorHex;
 let colorRgba;
 let colorBtn;
+let textOptionsArr = [];
 
 foreColor.value = "#000000";
 
@@ -33,7 +35,7 @@ function setColor(){
     colorBtn = hexToRgba(colorHex, 1);
     document.documentElement.style.setProperty('--rgba-color', colorRgba);
     document.documentElement.style.setProperty('--btn-color', colorBtn);
-};
+}
 
 foreColor.addEventListener("change", setColor);
 
@@ -82,11 +84,40 @@ const initializer = () => {
 const modifyText = (command, defaultUi, value) => {
     //execCommand executes command on selected text
     document.execCommand(command, defaultUi, value);
+
 };
 
 optionsButtons.forEach((button) => {
+    //! does not work well with align buttons
+    //todo make align buttons align entire text if nothing is selected
+    
     button.addEventListener("click", () => {
+        textInput.focus();
+
+        if (textOptionsArr.includes(button.id)) {
+            textOptionsArr.splice(textOptionsArr.indexOf(button.id), 1);
+        } else {
+            textOptionsArr.push(button.id);
+        }
+
+        let keypressed = false;
+
+        textInput.addEventListener("keydown", () => {
+            keypressed = true;
+            console.log('keydown');
+        })
+
+        textInput.addEventListener("focus", () => {
+            if (keypressed===false){
+                console.log('focus');
+                textOptionsArr.forEach((btnClass) =>{
+                    modifyText(btnClass, false, null);
+                });
+            }
+        });
+
         modifyText(button.id, false, null);
+        console.log(textOptionsArr);
     });
 });
 
