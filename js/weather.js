@@ -1,4 +1,5 @@
 const apiKey = "dc7ee58adb3effd37322f78b3c370c66";
+//todo modify the api key to be hidden
 const cityInput = document.querySelector(".city-input");
 const fetchWeatherButton = document.querySelector(".fetch-weather");
 const weatherInfo = document.querySelector(".weather-info");
@@ -19,15 +20,12 @@ function fetchWeather() {
     }
     cityInput.value = "";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
-    console.log(apiUrl);
     fetch(apiUrl)
         .then((response) => response.json())
         .catch(error => {
             console.log('Error fetching weather data:', error);
         })
         .then(data => {
-            console.log(data);
-
             const rawTemperature = data.main.temp;
             const temperature = Math.round(rawTemperature * 2) / 2;
 
@@ -41,7 +39,6 @@ function fetchWeather() {
             localStorage.setItem("timezone", timezone);
 
             const icon = data.weather[0].icon;
-            console.log(icon);
             
             weatherInfo.innerHTML = `
             <div class="weather-desc-div"> 
