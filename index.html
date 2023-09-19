@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/weather.css">
     <link rel="stylesheet" href="./css/clock.css">
     <link rel="stylesheet" href="./css/notes.css">
+    <link rel="stylesheet" href="./css/search.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,159 +27,141 @@
 </head>
 
 <body>
-    <!--
-<nav>
-</nav> -->
-
-    <div class="main-container">
-        <div class="notes-container">
-            <div class="notes-toolbar">
-
-
-                <button id="bold" class="option-button format">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bold">
-                        <path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path>
-                        <path d="M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path>
-                    </svg>
-                </button>
-                <button id="italic" class="option-button format">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-italic">
-                        <line x1="19" y1="4" x2="10" y2="4"></line>
-                        <line x1="14" y1="20" x2="5" y2="20"></line>
-                        <line x1="15" y1="4" x2="9" y2="20"></line>
-                    </svg>
-                </button>
-                <button id="underline" class="option-button format">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-underline">
-                        <path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"></path>
-                        <line x1="4" y1="21" x2="20" y2="21"></line>
-                    </svg>
-                </button>
-
-                <button id="justifyLeft" class="option-button align active">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-align-left">
-                        <line x1="17" y1="10" x2="3" y2="10"></line>
-                        <line x1="21" y1="6" x2="3" y2="6"></line>
-                        <line x1="21" y1="14" x2="3" y2="14"></line>
-                        <line x1="17" y1="18" x2="3" y2="18"></line>
-                    </svg>
-                </button>
-                <button id="justifyCenter" class="option-button align">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-align-left">
-                        <line x1="17" y1="10" x2="3" y2="10"></line>
-                        <line x1="21" y1="6" x2="3" y2="6"></line>
-                        <line x1="21" y1="14" x2="3" y2="14"></line>
-                        <line x1="17" y1="18" x2="3" y2="18"></line>
-                    </svg>
-                </button>
-                <button id="justifyRight" class="option-button align">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-align-right">
-                        <line x1="21" y1="10" x2="7" y2="10"></line>
-                        <line x1="21" y1="6" x2="3" y2="6"></line>
-                        <line x1="21" y1="14" x2="3" y2="14"></line>
-                        <line x1="21" y1="18" x2="7" y2="18"></line>
-                    </svg>
-                </button>
-                <button id="justifyFull" class="option-button align">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-align-justify">
-                        <line x1="21" y1="10" x2="3" y2="10"></line>
-                        <line x1="21" y1="6" x2="3" y2="6"></line>
-                        <line x1="21" y1="14" x2="3" y2="14"></line>
-                        <line x1="21" y1="18" x2="3" y2="18"></line>
-                    </svg>
-                </button>
-                <!--
-                <button id="undo" class="option-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-rotate-ccw">
-                        <polyline points="1 4 1 10 7 10"></polyline>
-                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
-                    </svg>
-                </button>
-                <button id="redo" class="option-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-rotate-cw">
-                        <polyline points="23 4 23 10 17 10"></polyline>
-                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
-                    </svg>
-                </button>  -->
-
-                <select id="fontSize" class="advanced-options">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3" selected>3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                </select>
-
-                <button id="colorPicker">
-                    <input type="color" id="foreColor" class="advanced-options color" />
-                </button>
-
+    <main>
+        <div class="i">
+            <div class="i-card">
+                <label class="i-card-label">Search the internet</label>
+                <div class="i-container">
+                    <div class="i-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-search">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                    </div>
+                    <div class="i-input-container">
+                        <input class="i-input" placeholder="It just can't be pizza..." />
+                    </div>
+                </div>
             </div>
-            <div class="text-input" contenteditable="true" spellcheck="false">
-            </div>
-
         </div>
-        <div class="weather-time-todo-container">
 
-            <div class="weather-time-container">
-
-                <div class="weather-input-grid">
-                    <input type="text" class="city-input inputs" placeholder="Enter city name">
-                    <button class="fetch-weather inputs">
-                        <img src="icons/search.png" alt="search" class="search-icon">
+        <div class="main-container">
+            <div class="notes-container">
+                <div class="notes-toolbar">
+                    <button id="bold" class="option-button format">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-bold">
+                            <path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path>
+                            <path d="M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path>
+                        </svg>
                     </button>
+                    <button id="italic" class="option-button format">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-italic">
+                            <line x1="19" y1="4" x2="10" y2="4"></line>
+                            <line x1="14" y1="20" x2="5" y2="20"></line>
+                            <line x1="15" y1="4" x2="9" y2="20"></line>
+                        </svg>
+                    </button>
+                    <button id="underline" class="option-button format">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-underline">
+                            <path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"></path>
+                            <line x1="4" y1="21" x2="20" y2="21"></line>
+                        </svg>
+                    </button>
+                    <button id="justifyLeft" class="option-button align active">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-align-left">
+                            <line x1="17" y1="10" x2="3" y2="10"></line>
+                            <line x1="21" y1="6" x2="3" y2="6"></line>
+                            <line x1="21" y1="14" x2="3" y2="14"></line>
+                            <line x1="17" y1="18" x2="3" y2="18"></line>
+                        </svg>
+                    </button>
+                    <button id="justifyCenter" class="option-button align">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-align-left">
+                            <line x1="17" y1="10" x2="3" y2="10"></line>
+                            <line x1="21" y1="6" x2="3" y2="6"></line>
+                            <line x1="21" y1="14" x2="3" y2="14"></line>
+                            <line x1="17" y1="18" x2="3" y2="18"></line>
+                        </svg>
+                    </button>
+                    <button id="justifyRight" class="option-button align">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-align-right">
+                            <line x1="21" y1="10" x2="7" y2="10"></line>
+                            <line x1="21" y1="6" x2="3" y2="6"></line>
+                            <line x1="21" y1="14" x2="3" y2="14"></line>
+                            <line x1="21" y1="18" x2="7" y2="18"></line>
+                        </svg>
+                    </button>
+                    <button id="justifyFull" class="option-button align">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-align-justify">
+                            <line x1="21" y1="10" x2="3" y2="10"></line>
+                            <line x1="21" y1="6" x2="3" y2="6"></line>
+                            <line x1="21" y1="14" x2="3" y2="14"></line>
+                            <line x1="21" y1="18" x2="3" y2="18"></line>
+                        </svg>
+                    </button>
+                    <select id="fontSize" class="advanced-options"></select>
+                    <button id="colorPicker" class="advanced-options">
+                        <input type="color" id="foreColor" class="advanced-options color" />
+                    </button>
+                    <!-- todo add a remove button -->
+                </div>
+                <div class="text-input" contenteditable="true" spellcheck="false">
                 </div>
 
-                <div class="weather-time-info">
-                    <div class="weather-info"></div>
-                    <div class="time-info">
-                        <div class="clock">
-                            <div class="hour hand" id="hour"></div>
-                            <div class="minute hand" id="minute"></div>
-                            <div class="seconds hand" id="seconds"></div>
-                            <div class="center-point hand"></div>
+            </div>
+            <div class="weather-time-todo-container">
+
+                <div class="weather-time-container">
+                    <div class="weather-input-grid">
+                        <input type="text" class="city-input inputs" placeholder="Enter city name">
+                        <button class="fetch-weather inputs">
+                            <img src="icons/search.png" alt="search" class="search-icon">
+                        </button>
+                    </div>
+
+                    <div class="weather-time-info">
+                        <div class="weather-info"></div>
+                        <div class="time-info">
+                            <div class="clock">
+                                <div class="hour hand" id="hour"></div>
+                                <div class="minute hand" id="minute"></div>
+                                <div class="seconds hand" id="seconds"></div>
+                                <div class="center-point hand"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-            </div>
 
-
-            <div class="todo-container">
-                <div class="todo-input-grid">
-                    <input class="todo-name inputs" placeholder="Todo name">
-                    <input type="date" class="todo-date inputs">
-                    <button class="todo-add inputs">
-                        <img src="icons/add.svg" alt="Add" class="todo-add-icon">
-                    </button>
+                <div class="todo-container">
+                    <div class="todo-input-grid">
+                        <input class="todo-name inputs" placeholder="Todo name">
+                        <input type="date" class="todo-date inputs">
+                        <button class="todo-add inputs">
+                            <img src="icons/add.svg" alt="Add" class="todo-add-icon">
+                        </button>
+                    </div>
+                    <div class="todo-list"></div>
                 </div>
-                <div class="todo-list"></div>
+
             </div>
-
         </div>
-    </div>
-
-    <!-- <footer>
-</footer> -->
-
+    </main>
 </body>
 
 </html>

@@ -4,10 +4,30 @@ let formatButtons = document.querySelectorAll(".format");
 let alignButtons = document.querySelectorAll(".align");
 let foreColor = document.querySelector("#foreColor");
 let textInput = document.querySelector(".text-input");
+let notesContainer = document.querySelector(".notes-container");
+let fontSizeRef = document.getElementById("fontSize");
 let colorHex;
 let colorRgba;
 let colorBtn;
 
+function saveToLocalStorage() {
+    localStorage.setItem('textContents', textInput.innerHTML);
+}
+
+function loadFromLocalStorage() {
+    const savedText = localStorage.getItem('textContents');
+    if (savedText) {
+        textInput.innerHTML = savedText;
+    }
+}
+
+textInput.addEventListener('input', saveToLocalStorage);
+
+if (localStorage.getItem('textContents')) {
+    loadFromLocalStorage();
+}
+
+//todo make it so after refreshing the page when you start typing it does it in another element (currently it does it in the first one so the effects from the first one are still there)
 
 foreColor.value = "#000000";
 
@@ -39,12 +59,18 @@ function setColor() {
 foreColor.addEventListener("change", setColor);
 
 setColor();
+
 const initializer = () => {
-    //* function calls for highlighting buttons
-    //* No highlights for link, unlink,lists, undo,redo since they are one time operations
     highlighter(alignButtons, true);
     highlighter(formatButtons, false);
 
+    for (let i = 1; i <= 7; i++) {
+        let option = document.createElement("option");
+        option.value = i;
+        option.innerHTML = i;
+        fontSizeRef.appendChild(option);
+      }
+      fontSizeRef.value = 3;
 };
 
 const modifyText = (command, defaultUi, value) => {
@@ -52,36 +78,55 @@ const modifyText = (command, defaultUi, value) => {
 
 };
 
-
-//! Every second focus the effects stop working
-//todo fix the above bug
-
-textInput.addEventListener("focus", () => {
-    console.log("focus");
-    optionsButtons.forEach((button) => {
-        if (button.classList.contains("active")) {
-            console.log(button);
-            modifyText(button.id, false, null);
-        }
-    });
-});
-
 const highlighter = (className, needsRemoval) => {
     className.forEach((button) => {
         button.addEventListener("click", () => {
             if (needsRemoval) {
+                let alreadyActive = false;
+                if (button.classList.contains("active")) {
+                    alreadyActive = true;
+                }
+                //Remove highlight from other buttons
                 highlighterRemover(className);
-                button.classList.add("active");
+                if (!alreadyActive) {
+                    button.classList.add("active");
+                }
             } else {
-                //* code here applies to optionsButtons
+                //if other buttons can be highlighted
                 button.classList.toggle("active");
-                console.log(`${button.id} button clicked`);
-                textInput.focus();
             }
         });
     });
 };
 
+optionsButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        textInput.focus();
+        modifyText(button.id, false, null);
+    });
+});
+
+document.addEventListener('click', function (event) {
+    const withinBoundaries = event.composedPath().includes(notesContainer);
+    if (!withinBoundaries) {
+        fontSizeRef.value = 3;
+        optionsButtons.forEach((button) => {
+            if (button.classList.contains("active") && !button.classList.contains("align")) {
+                button.classList.remove("active");
+                textInput.addEventListener("focus", () => {
+                    document.execCommand("foreColor", false, colorHex);
+                    modifyText(button.id, false, null);
+                    modifyText("fontSize", false, 3);
+                }, { once: true });
+            } else {
+                textInput.addEventListener("focus", () => {
+                    document.execCommand("foreColor", false, colorHex);
+                    modifyText("fontSize", false, 3);
+                }, { once: true });
+            }
+        });
+    }
+});
 
 const highlighterRemover = (className) => {
     className.forEach((button) => {
@@ -98,3 +143,4 @@ advancedOptions.forEach((button) => {
 
 
 initializer();
+

@@ -4,9 +4,11 @@ function updateMainContainerSize() {
     let heightInEm = screenHeightInPixels / 16;
     let widthInEm = screenWidthInPixels / 16;
     const mainContainer = document.querySelector(".main-container");
+    const searchBar = document.querySelector(".i");
 
     mainContainer.style.height = (0.8 * heightInEm) + "em";
     mainContainer.style.width = (0.8 * widthInEm) + "em";
+    searchBar.style.width = (0.8 * widthInEm) + "em";
 
 }
 
