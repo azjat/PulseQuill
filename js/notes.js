@@ -106,12 +106,16 @@ optionsButtons.forEach((button) => {
     });
 });
 
+//! problem - the if else statement is not working properly
+// it should do the code inside the else only if all the buttons are not active 
 document.addEventListener('click', function (event) {
     const withinBoundaries = event.composedPath().includes(notesContainer);
     if (!withinBoundaries) {
+        console.log("clicked outside");
         fontSizeRef.value = 3;
         optionsButtons.forEach((button) => {
             if (button.classList.contains("active") && !button.classList.contains("align")) {
+                console.log("removing active");
                 button.classList.remove("active");
                 textInput.addEventListener("focus", () => {
                     document.execCommand("foreColor", false, colorHex);
@@ -119,6 +123,7 @@ document.addEventListener('click', function (event) {
                     modifyText("fontSize", false, 3);
                 }, { once: true });
             } else {
+                console.log("not removing active");
                 textInput.addEventListener("focus", () => {
                     document.execCommand("foreColor", false, colorHex);
                     modifyText("fontSize", false, 3);
