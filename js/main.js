@@ -47,3 +47,5 @@ const searchBar = document.querySelector(".i");
 searchBar.addEventListener("click", function (event) {
     scrollToTop();
 });
+
+scrollToTop();
