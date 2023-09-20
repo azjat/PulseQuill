@@ -1,7 +1,7 @@
 .weather-input-grid {
     display: flex;
     column-gap: 0.625em;
-    margin: 0.5em 0.6em;
+    margin: var(--margin-grids) var(--margin-todo-weather);
 }
 
 .city-input {
@@ -48,7 +48,7 @@
 
 .weather-desc-div{
     font-weight: 600;
-    margin: 0.5em;
+    margin: 0;
 }
 
 .weather-city{
@@ -70,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.6em;
+    margin: var(--margin-todo-weather);
 }
 .weather-icon {
     object-fit: cover;

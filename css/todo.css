@@ -4,7 +4,7 @@
   display: grid;
   column-gap: 0.625em;
   row-gap: 0.625em;
-  margin: 0.5em 0.6em;
+  margin: var(--margin-grids) var(--margin-todo-weather);
   align-items: center;
   justify-content: center;
 }

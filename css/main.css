@@ -2,6 +2,8 @@
     font-family: Montserrat;
     font-size: 16px;    
     --border-radius: 1vh;
+    --margin-todo-weather: 0.8em;
+    --margin-grids: 0.8em;
 }
 
 body {

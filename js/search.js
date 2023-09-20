@@ -112,3 +112,10 @@ searchIcon.addEventListener('click', function() {
     searchForm.dispatchEvent(new Event('submit'));
     }
 });
+
+searchInput.addEventListener('keydown', function(event) {
+    if (event.keyCode === 9 && searchInput.value.trim() === '') {
+        event.preventDefault();
+        searchInput.value = placeholder;
+    }
+});
