@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbd75597-4bbc-49e1-90f6-b2fc06947ff4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/search.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/notes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/weather.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/weather.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -52,6 +54,7 @@
       <updated>1694867953567</updated>
       <workItem from="1694867954757" duration="28000" />
       <workItem from="1695026531704" duration="482000" />
+      <workItem from="1695206213886" duration="25000" />
     </task>
     <servers />
   </component>

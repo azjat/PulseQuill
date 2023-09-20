@@ -23,3 +23,27 @@ addButton.addEventListener("mouseenter", function (event) {
 addButton.addEventListener("mouseleave", function (event) {
     addButtonIcon.classList.remove("todo-add-hover");
 });
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth"
+    });
+}
+
+const mainContainer = document.querySelector(".main-container");
+mainContainer.addEventListener("click", function (event) {
+    scrollToBottom();
+});
+
+const searchBar = document.querySelector(".i");
+searchBar.addEventListener("click", function (event) {
+    scrollToTop();
+});

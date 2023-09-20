@@ -1,21 +1,13 @@
-.i {
-    padding: 1px;
+.i-card {
+    padding: 16px 16px;
+    background-color: #E0E5EC;
     border-radius: var(--border-radius);
-    background: linear-gradient(-67deg, rgba(#E0E5EC, .7), rgba(255, 255, 255, .8));
-    overflow: hidden;
-    box-shadow:
-        -2px -2px 6px rgba(#fff, .6),
-        2px 2px 12px #c8d8e7;
+    box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+.i{
     max-width: 55.4em;
     min-width: 37.8em;
 }
-
-.i-card {
-    padding: 16px 16px;
-    background-color: #e2e9f4;
-    border-radius: var(--border-radius);
-}
-
 .i-container {
     display: flex;
 }
@@ -50,15 +42,12 @@
 }
 
 .i-input {
-    background-color: #e3edf7;
-    padding: 16px 32px;
+    background-color: #E0E5EC;
+    padding: 1em 2em;
     border: none;
     display: block;
-    font-family: 'Orbitron', sans-serif;
     font-weight: 600;
     color: #a9b8c9;
-    -webkit-appearance: none;
-    transition: all 240ms ease-out;
     width: 100%;
 
     &::placeholder {
@@ -75,7 +64,6 @@
 .i-input-container {
     --top-shadow: inset 1px 1px 3px #c5d4e3, inset 2px 2px 6px #c5d4e3;
     --bottom-shadow: inset -2px -2px 4px rgba(255, 255, 255, .7);
-
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;

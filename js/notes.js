@@ -106,8 +106,9 @@ optionsButtons.forEach((button) => {
     });
 });
 
-//! problem - the if else statement is not working properly
-// it should do the code inside the else only if all the buttons are not active 
+//! there's multiple bugs with this
+//todo switch to a method that's not deprecated
+
 document.addEventListener('click', function (event) {
     const withinBoundaries = event.composedPath().includes(notesContainer);
     if (!withinBoundaries) {
