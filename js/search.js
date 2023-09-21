@@ -79,6 +79,7 @@ const funnySearches = [
     "Are pigeons real?",
     "Why do pigeons explode when they eat rice?",
     "Why do pigeons have antennas in their butts?",
+    "How to join the Bosnian military?"
 ];
 
 randomIndex = () => {
